@@ -1,0 +1,12 @@
+
+# Faca download do arquivo setup.sh no Github website.
+# Ou utilize o comando abaixo
+wget http://URL-do-arquivo
+
+# Nao se esqueca de tornar o script executavel
+chmod +x setup.sh
+
+# Para executar o script use um dos dois comandos abaixo.
+./setup.sh 
+# ou
+bash setup.sh

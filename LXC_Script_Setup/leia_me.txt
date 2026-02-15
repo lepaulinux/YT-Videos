@@ -1,7 +1,7 @@
 
 # Faca download do arquivo setup.sh no Github website.
 # Ou utilize o comando abaixo
-wget http://URL-do-arquivo
+wget https://github.com/lepaulinux/YT-Videos/blob/main/LXC_Script_Setup/setup.sh
 
 # Nao se esqueca de tornar o script executavel
 chmod +x setup.sh

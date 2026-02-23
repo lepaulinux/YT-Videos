@@ -1,0 +1,42 @@
+version: "3"
+
+networks:
+  MC2:
+    driver: bridge
+
+services:
+  droppy:
+    container_name: droppy
+    image: silverwind/droppy
+    ports:
+      - "8989:8989"
+    volumes:
+      - /home/docker/droppy:/config
+      - /home/docker/Files:/files
+    restart: always
+    networks:
+      - MC2
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    volumes:
+      - /home/docker/uptimekuma/config:/app/data
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - MC2
+
+  beszel:
+    image: henrygd/beszel
+    container_name: beszel
+    restart: always
+    ports:
+      - "8090:8090"
+    volumes:
+      - /home/docker/beszel:/beszel_data
+    networks:
+      - MC2

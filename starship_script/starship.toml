@@ -1,0 +1,26 @@
+format = """
+$docker_context$directory$git_branch$git_status$time$character
+"""
+
+[docker_context]
+format = "[ docker ](bg:#00B0FF fg:black)"
+only_with_files = false
+
+[directory]
+truncation_length = 3
+format = "[ $path ](bg:#00E676 fg:black)"
+
+[git_branch]
+format = "[  $branch ](bg:#7C4DFF fg:black)"
+
+[git_status]
+format = "[ $all_status ](bg:#7C4DFF fg:black)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ $time ](bg:#FF4081 fg:black)"
+
+[character]
+success_symbol = "[ ➜ ](bg:#212121 fg:#00E676)"
+error_symbol   = "[ ➜ ](bg:#212121 fg:#FF1744)"

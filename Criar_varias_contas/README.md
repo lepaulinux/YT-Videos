@@ -65,7 +65,7 @@ done
 
 ```bash
 git clone https://github.com/lepaulinux/YT-Videos.git
-cd Criar_varias_contas
+cd YT-Videos/Criar_varias_contas/
 ```
 
 2. Dê permissão de execução:

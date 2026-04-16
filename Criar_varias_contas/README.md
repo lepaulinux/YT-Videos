@@ -31,7 +31,7 @@ user777,Usuario Teste 3
 ## 🧠 Script
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 
 ARQUIVO="usuarios.csv"
 

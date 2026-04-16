@@ -64,8 +64,8 @@ done
 1. Clone o repositório:
 
 ```bash
-[git clone https://github.com/lepaulinux/YT-Videos/Criar_varias_contas.git](https://github.com/lepaulinux/YT-Videos/tree/main/Criar_varias_contas)
-cd seu-repo
+git clone https://github.com/lepaulinux/YT-Videos.git
+cd Criar_varias_contas
 ```
 
 2. Dê permissão de execução:

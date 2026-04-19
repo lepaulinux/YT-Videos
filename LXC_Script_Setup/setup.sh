@@ -45,7 +45,7 @@ service ssh restart
 
 yellow_echo "**** Set the timezone ****"
 # Set the timezone
-timedatectl set-timezone America/Brasilia
+timedatectl set-timezone America/Sao_Paulo
 
 # Download the docker container image
 # yellow_echo "**** Download the docker container image ****"

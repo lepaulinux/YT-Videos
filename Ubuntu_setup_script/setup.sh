@@ -61,7 +61,7 @@ echo "--------------------------------------------------"
 echo "Instalando flatpak and Apps de Terceiros..."
 echo "--------------------------------------------------"
 # flatpak
-sudo apt install flatpak -y
+sudo apt install -y flatpak
 # Add repo
 sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -75,7 +75,7 @@ sudo apt install fzf -y
 echo "--------------------------------------------------"
 echo "Instalando Proton VPN..."
 echo "--------------------------------------------------"
-flatpak install flathub com.protonvpn.www
+sudo flatpak -y install flathub com.protonvpn.www
 
 
 # Remove

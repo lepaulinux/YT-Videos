@@ -1,6 +1,10 @@
 format = """
-$docker_context$directory$git_branch$git_status$time$character
+$username$docker_context$directory$git_branch$git_status$time$character
 """
+
+[username]
+show_always = true
+format = "[ $user ](bg:#FFD600 fg:black)"
 
 [docker_context]
 format = "[ docker ](bg:#00B0FF fg:black)"

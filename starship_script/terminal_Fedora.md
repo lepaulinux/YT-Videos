@@ -1,0 +1,42 @@
+# instale o curl se voce nao tive no seu computador
+sudo dnf install curl
+
+# usando o comando abaixo para instalar o starship
+curl -sS https://starship.rs/install.sh | sh
+
+# acess o home folder
+cd ~
+# faca backup do arquivo .bashrc por seguranca
+cp -v .bashrc .bashrc.bkp
+
+# acesse o arquivo, no comando abaixo eu utilizo o vim, mas voce pode utilizar o nano
+vim .bashrc
+
+# Copie essa linha no final do arquivo .bashrc
+# --- STARSHIP PROMPT ---
+eval "$(starship init bash)"
+# :wq -> se estiver utilizando o vim salve e saia.
+
+# reload the .bashrc para que as configuracoes sejam aplicadas
+source .bashrc
+
+# acesse o diretorio .config
+cd ~/.config/
+
+# baixa o arquivo starship.toml
+wget "https://raw.githubusercontent.com/lepaulinux/linux/refs/heads/master/starship/starship.toml"
+
+# Verifique a version e o shel que esta sendo utlizado
+starship --version
+echo $STARSHIP_SHELL
+
+# se quiser baixe e instale essas duas fonts.
+sudo dnf install fonts-firacode fonts-jetbrains-mono
+
+# acesse o home folder
+cd ~
+
+# reload o .bashrc mais uma ve para garantir.
+source .bashrc
+
+# configuracao finalizada

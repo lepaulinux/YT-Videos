@@ -1,8 +1,10 @@
 # Created by Leandro Paulino
-# Version 1.4
+# Version 2.0
 # Attention: run script as a root since the commands does not include sudo.
 #!/bin/bash
 
+# Type your username here
+USER='lptech'
 # Function to echo in yellow
 yellow_echo() {
   echo -e "\e[33m$1\e[0m"
@@ -18,15 +20,27 @@ yellow_echo "**** Installing docker and docker-compose ****"
 apt install docker.io -y
 
 # Install Docker Compose
-apt install docker-compose -y
+apt update && apt install -y ca-certificates curl gnupg && \
+install -m 0755 -d /etc/apt/keyrings && \
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+chmod a+r /etc/apt/keyrings/docker.gpg && \
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+https://download.docker.com/linux/ubuntu \
+$(. /etc/os-release && echo $VERSION_CODENAME) stable" | \
+tee /etc/apt/sources.list.d/docker.list > /dev/null && \
+apt update && \
+apt install -y docker-compose-plugin
+
+apt install vim -y
 
 # Create a user called 'lptech'
 yellow_echo "**** Creating user and adding to the groups ****"
-useradd user
+useradd $USER
 
-# Add the user 'lptech' to the 'docker' and 'sudo' groups
-usermod -aG docker user
-usermod -aG sudo user
+# Add the user '$USER' to the 'docker' and 'sudo' groups
+usermod -aG docker $USER
+usermod -aG sudo $USER
 
 # Create an empty docker-compose.yml file in /home
 touch docker-compose.yml

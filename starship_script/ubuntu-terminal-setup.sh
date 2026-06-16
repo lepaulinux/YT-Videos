@@ -63,7 +63,7 @@ mkdir -p ~/.config
 # -------------------------------
 echo "⬇️  Baixando starship.toml..."
 wget -q -O ~/.config/starship.toml \
-"https://raw.githubusercontent.com/lepaulinux/linux/refs/heads/master/starship/starship.toml"
+"https://raw.githubusercontent.com/lepaulinux/YT-Videos/refs/heads/main/starship_script/starship.toml"
 
 # -------------------------------
 # Recarrega bashrc

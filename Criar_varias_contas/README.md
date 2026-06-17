@@ -80,6 +80,18 @@ chmod +x criar_usuarios.sh
 sudo ./criar_usuarios.sh
 ```
 
+▶️ How to use
+
+Clone the repository:
+git clone https://github.com/lepaulinux/YT-Videos.git
+cd YT-Videos/Criar_varias_contas/
+
+Give execution permission:
+chmod +x criar_usuarios.sh
+
+Run as root:
+sudo ./criar_usuarios.sh
+
 ---
 
 ## 🔐 Segurança

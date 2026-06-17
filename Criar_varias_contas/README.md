@@ -10,9 +10,9 @@ O arquivo `usuarios.csv` deve seguir o formato:
 
 ```csv
 usuario,nome_completo
-user555,Usuario Teste 1
-user666,Usuario Teste 2
-user777,Usuario Teste 3
+user555,Usuario Teste 555
+user666,Usuario Teste 666
+user777,Usuario Teste 777
 ```
 
 ---
